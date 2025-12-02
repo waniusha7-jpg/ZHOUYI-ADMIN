@@ -23,11 +23,11 @@ export const useTagsViewStore = defineStore('tagsView', () => {
         }
     }
 
-    // 删除标签
+
     async function removeTag(path) {
         const currentIndex = state.tagsList.findIndex(tag => tag.path === path);
         if (currentIndex !== -1) {
-            // 先将标签移除
+
             state.tagsList = state.tagsList.filter(tag => tag.path !== path);
 
             if (path === currentRoute.path) {
